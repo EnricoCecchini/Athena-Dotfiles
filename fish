@@ -1,1 +1,0 @@
-/home/chaks243/.config/fish
