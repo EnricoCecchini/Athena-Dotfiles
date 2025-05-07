@@ -5,3 +5,29 @@ version = 3
   interval = '24h'
   auto = false
   notice = true
+
+final_space = true
+version = 3
+
+[[blocks]]
+alignment = "left"
+newline = true
+type = "prompt"
+
+  [[blocks.segments]]
+  background = "#ffb300"
+  foreground = "#ffffff"
+  leading_diamond = ""
+  template = "💀"
+  style = "diamond"
+  trailing_diamond = ""
+  type = "session"
+
+  [[blocks.segments]]
+  background = "#61AFEF"
+  foreground = "#ffffff"
+  powerline_symbol = ""
+  template = " {{ .Path }} "
+  exclude_folders = [ "/super/secret/project" ]
+  style = "powerline"
+  type = "path"
