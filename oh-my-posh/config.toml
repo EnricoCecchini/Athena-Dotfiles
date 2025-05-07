@@ -1,0 +1,7 @@
+version = 3
+
+[upgrade]
+  source = 'cdn'
+  interval = '24h'
+  auto = false
+  notice = true

@@ -1,0 +1,7 @@
+# SHow Pending Update
+[upgrade]
+notice = true
+auto = false
+interval = "24h"
+
+
