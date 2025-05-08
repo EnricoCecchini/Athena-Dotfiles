@@ -21,7 +21,7 @@ sudo packman -S kitty fish rofi stow thunar
 
 # Link config files
 echo "Stowing config files..."
-stow --target=$HOME kitty fish rofi
+stow --target=$HOME kitty fish rofi thunar
 
 # Set fish as default shell if not already
 echo "Setting up fish as default shell..."
