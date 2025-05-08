@@ -15,12 +15,16 @@ fi
 echo "Beginning Setup"
 
 # Install recquired packages
-sudo packman -S kitty fish rofi stow
+echo "Installing packages..."
+sudo packman -S kitty fish rofi stow thunar
+
 
 # Link config files
+echo "Stowing config files..."
 stow --target=$HOME kitty fish rofi
 
 # Set fish as default shell if not already
+echo "Setting up fish as default shell..."
 if [ "$SHELL" != "/usr/bin/fish" ]; then
     chsh -s /usr/bin/fish
     echo "Default shell changed to fish. Log out and back in to apply."
