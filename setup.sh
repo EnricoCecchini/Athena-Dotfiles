@@ -16,7 +16,7 @@ echo "Beginning Setup"
 
 # Install recquired packages
 echo "Installing packages..."
-sudo packman -S kitty fish rofi stow thunar
+sudo packman -S kitty fish rofi stow thunar github-cli
 
 
 # Link config files
@@ -29,3 +29,22 @@ if [ "$SHELL" != "/usr/bin/fish" ]; then
     chsh -s /usr/bin/fish
     echo "Default shell changed to fish. Log out and back in to apply."
 fi
+
+# Install Utilities
+echo "Installing Utilities"
+echo "Making utils folder"
+mkdir ~/Utils
+
+# Installing yay
+echo "Installing yay"
+cd ~/Utils
+git clone https://aur.archlinux.org/yay.git
+cd ~/Utils/yay
+makepkg -sri
+
+# Install VS Code
+echo "Installing VS Code"
+cd ~/Utils
+git clone https://aur.archlinux.org/visual-studio-code-bin.git
+cd ~/Utils/visual-studio-code-bin
+makepkg -sri
